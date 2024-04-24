@@ -3,7 +3,7 @@ import { FaCheckCircle as Tick } from "react-icons/fa";
 
 const tiers = [
   {
-    name: "Freelancer",
+    name: "Basic",
     id: "tier-freelancer",
     href: "#",
     priceMonthly: "$24",
