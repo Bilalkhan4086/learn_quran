@@ -3,46 +3,44 @@ import { FaCheckCircle as Tick } from "react-icons/fa";
 
 const tiers = [
   {
-    name: "Basic",
+    name: "Beginner",
     id: "tier-freelancer",
-    href: "#",
-    priceMonthly: "$24",
-    description: "The essentials to provide your best work for clients.",
+    href: "/fee-structure",
+    priceMonthly: "$30",
+    description: "Basic Qaida Reading and Learning with Tajweed:",
     features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
+      "Basic Qaida Mastery",
+      "Customized for Kids and Females",
+      "Efficient Quranic Learning Approach",
+      // "48-hour support response time",
     ],
     mostPopular: false,
   },
   {
-    name: "Startup",
+    name: "Intermediate",
     id: "tier-startup",
-    href: "#",
-    priceMonthly: "$32",
-    description: "A plan that scales with your rapidly growing business.",
+    href: "/fee-structure",
+    priceMonthly: "$40",
+    description: "Basic Quran Recitation and Learning with Tajweed:",
     features: [
-      "25 products",
-      "Up to 10,000 subscribers",
-      "Advanced analytics",
-      "24-hour support response time",
-      "Marketing automations",
+      "Quranic Reading with Tajweed",
+      "Arabic Alphabet Recognition ",
+      "Personalized Guidance for Success",
     ],
     mostPopular: true,
   },
   {
-    name: "Enterprise",
+    name: "Advanced",
     id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "$48",
-    description: "Dedicated support and infrastructure for your company.",
+    href: "/fee-structure",
+    priceMonthly: "$50",
+    description: "Hifz Course With Tajweed:",
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "1-hour, dedicated support response time",
-      "Marketing automations",
+      "Quran Memorization Course",
+      "Daily Guided Lessons",
+      "Personalized Online Coaching",
+      // "1-hour, dedicated support response time",
+      // "Marketing automations",
     ],
     mostPopular: false,
   },
@@ -54,7 +52,7 @@ function classNames(...classes: any[]) {
 
 const Pricing = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl">
       <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {tiers.map((tier, tierIdx) => (
           <div

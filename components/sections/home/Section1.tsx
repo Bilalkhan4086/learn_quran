@@ -14,12 +14,12 @@ const Section1 = () => {
       </h3>
       <Image
         className="m-auto my-10"
-        src={"/images/quran.png"}
+        src={"/images/qaida.webp"}
         alt="quran"
-        width={500}
-        height={500}
+        width={800}
+        height={800}
       />
-      <div className="max-w-[800px] flex flex-col gap-3 text-xl mx-auto my-10">
+      <div className="max-w-[1024px] flex flex-col gap-3 text-xl mx-auto my-10">
         <p>
           <span className="text-purple">Tealam Al-Quran Online Academy</span> is
           a platform dedicated to providing{" "}
