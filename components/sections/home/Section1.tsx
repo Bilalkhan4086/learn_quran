@@ -29,7 +29,7 @@ const Section1 = () => {
           to Muslim students worldwide. Our academy offers comprehensive online
           teachings, including{" "}
           <span className="text-kaizenyellow">
-            daily supplications and Tajweed, crucial for every Muslim's
+            daily supplications and Tajweed, crucial for every Muslim&apos;s
             spiritual growth.
           </span>
         </p>
@@ -56,7 +56,7 @@ const Section1 = () => {
           <span className="text-kaizengreen">
             Tealam Al-Quran Online Academy
           </span>
-          , we're committed to offering{" "}
+          , we&apos;re committed to offering{" "}
           <span className="text-kaizengreen">specially designed courses</span>{" "}
           that cater to the needs of our diverse student community.{" "}
           <span className="text-kaizengreen">Join us</span>, and experience the

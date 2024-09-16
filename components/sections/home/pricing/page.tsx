@@ -98,7 +98,7 @@ const Pricing = () => {
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <Tick classes="h-6 w-6 flex-none stroke-[1.75] stroke-indigo-600" />
+                    <Tick className="h-6 w-6 flex-none stroke-[1.75] stroke-indigo-600" />
                     {feature}
                   </li>
                 ))}
