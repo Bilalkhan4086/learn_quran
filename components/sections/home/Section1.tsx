@@ -9,8 +9,11 @@ const Section1 = () => {
         <span className="text-kaizenyellow">Online Academy</span>
       </h1>
       <h3 className="text-white text-center my-5 text-3xl  max-[500px]:text-xl max-md:text-2xl">
-        we will teach quran to your{" "}
-        <span className="text-kaizenred">kids and females</span>.
+        we teach quran to{" "}
+        <span className="text-kaizenred">
+          you, your children, also females and males
+        </span>
+        .
       </h3>
       <Image
         className="m-auto my-10"
@@ -37,7 +40,9 @@ const Section1 = () => {
           <span className="text-kaizenred">Tajweed</span>, the correct
           pronunciation of Quranic letters, is a fundamental aspect of Quranic
           recitation. Our{" "}
-          <span className="text-kaizenred">experienced Quran teachers</span>{" "}
+          <span className="text-kaizenred">
+            experienced male and female staff
+          </span>{" "}
           ensure students learn and apply{" "}
           <span className="text-kaizenred">Tajweed principles</span> accurately.
         </p>
@@ -46,7 +51,7 @@ const Section1 = () => {
           <span className="text-kaizenblue">qualified instructors</span>,
           students,{" "}
           <span className="text-kaizenblue">
-            including sisters, daughters, and children
+            including sisters, brothers and kids
           </span>
           , can memorize and recite daily supplications, seeking the blessings
           and mercy of Allah in every step of their lives.
@@ -58,13 +63,13 @@ const Section1 = () => {
           </span>
           , we&apos;re committed to offering{" "}
           <span className="text-kaizengreen">specially designed courses</span>{" "}
-          that cater to the needs of our diverse student community.{" "}
+          that cater to the needs of our diverse student community.
           <span className="text-kaizengreen">Join us</span>, and experience the
           privilege of learning the{" "}
           <span className="text-kaizengreen">Quran online</span>, benefiting
           from our services while enjoying the global reach of our educational
           platform, all by the Grace of{" "}
-          <span className="text-purple">Allah Subhan wa Tala</span>.
+          <span className="text-purple">Allah Almighty</span>.
         </p>
       </div>
     </div>
