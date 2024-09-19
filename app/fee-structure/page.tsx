@@ -4,14 +4,12 @@ const FeeStructure = () => {
   return (
     <div className="max-w-7xl relative m-auto px-4 my-10 max-lg:p-6 py-20 flex flex-col">
       <h2 className="text-center text-3xl font-semibold text-kaizenblue">
-        Quran classes Fee, Online Quran lessons, 3 Free trial
+        Quran classes Fee, Online Quran lessons, 1 Free trial
       </h2>
       <p className="my-6 max-w-[900px] mx-auto text-center">
-        We will provide 3 free trials individual Online Quran lessons . You can
-        also get individual lessons at lowest possible cost as low as 15$ per
-        month in USA and £10 in UK. The below mentioned cost is exclusive of 3
-        free trial Quran classes and implement on monthly bases after the
-        satisfaction of trial period. Start Free Trial Quran classes
+        We provide opportunities for students and parents to have conversations
+        in free trial class with teachers for guidance and interaction with
+        teachers.
       </p>
 
       <div className="max-w-7xl w-full overflow-scroll">
