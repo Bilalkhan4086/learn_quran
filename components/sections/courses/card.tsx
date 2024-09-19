@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({ image }: any) => {
+const Card = ({ image, heading, description }: any) => {
   return (
     <Link
       href={"/courses/tafseer"}
@@ -10,10 +10,10 @@ const Card = ({ image }: any) => {
     >
       <Image src={image} alt={"card"} height={500} width={500} />
       <div className="p-2">
-        <h5 className="text-center">Tafseer</h5>
+        <h5 className="text-center">{heading}</h5>
         <p className="text-[12px] text-gray-400">
-          No doubt the knowledge of Quran is the best of all knowledge and it is
-          necessary for Muslims to not only learn the re...
+          {description?.slice(0, 117)}
+          {description?.length > 117 && "..."}
         </p>
       </div>
     </Link>

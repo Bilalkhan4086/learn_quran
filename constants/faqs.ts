@@ -20,7 +20,8 @@ export const faqs: { question: string; answer: string }[] = [
   },
   {
     question: "Do you only teach Quran?",
-    answer: "No, we also teach other islamic courses. see courses.",
+    answer:
+      "No, we also teach other islamic courses. <a href='/courses' class='text-purple underline'>see courses</a>",
   },
   {
     question: "What if I am waiting online and my tutor is not there?",
