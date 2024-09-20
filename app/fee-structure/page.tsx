@@ -38,7 +38,7 @@ const FeeStructure = () => {
               <th className="border-r-[1px] p-2 border-red-50  text-kaizenred" scope="row">
                 2 days a week 8 per month
               </th>
-              <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
+              <td className="border-r-[1px] p-2 border-red-50 text-kaizenred">
                 30 min lessons
               </td>
               <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
@@ -47,7 +47,7 @@ const FeeStructure = () => {
               <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
                 £15 per month
               </td>
-              <td>€18 per month</td>
+              <td className="text-kaizengreen">€18 per month</td>
             </tr>
             <tr>
               <th className="border-r-[1px] p-2 border-red-50 text-kaizenred" scope="row">
@@ -148,7 +148,7 @@ const FeeStructure = () => {
               <td className="border-r-[1px] py-2 border-red-50 text-kaizengreen">
                 $90 per month
               </td>
-              <td className="border-r-[1px] py-2 border-red-50 bg-kaizengreen">
+              <td className="border-r-[1px] py-2 border-red-50 text-kaizengreen">
                 £70 per month
               </td>
               <td className="text-kaizengreen">€85 per month</td>
@@ -187,7 +187,7 @@ const FeeStructure = () => {
               <td className="border-r-[1px] p-2 border-red-50 text-kaizenred">
                 30 min lessons
               </td>
-              <td className="border-r-[1px] p-2 border-red-50">70 per month</td>
+              <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">70 per month</td>
               <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
                 1500 per month
               </td>
@@ -230,7 +230,7 @@ const FeeStructure = () => {
               <td className="border-r-[1px] p-2 border-red-50 text-kaizenred">
                 30 min lessons
               </td>
-              <td className="border-r-[1px] p-2 border-red-50">
+              <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
                 115 per month
               </td>
               <td className="border-r-[1px] p-2 border-red-50 text-kaizengreen">
