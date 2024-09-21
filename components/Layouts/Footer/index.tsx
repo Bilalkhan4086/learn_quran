@@ -5,8 +5,8 @@ import Image from "next/image";
 const navigation = {
   company: [
     { name: "courses", href: "/courses" },
-    { name: "contact", href: "#" },
-    { name: "About us", href: "#" },
+    { name: "contact", href: "/about#contact" },
+    { name: "About us", href: "/about" },
     { name: "Fee structure", href: "/fee-structure" },
   ],
 

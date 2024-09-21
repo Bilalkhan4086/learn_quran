@@ -6,8 +6,8 @@ const Card = ({ info }: any) => {
   return (
     <div className="max-w-[240px] flex flex-col items-center ring-1 ring-white p-4 rounded-lg">
       <Image src={info.icon} alt="whatsapp" width={50} height={50} />
-      <h4 className="text-lg font-semibold my-5">{info.mediumText}</h4>
-      <h5 className="text-sm font-medium mb-5">
+      <h4 className="text-lg font-semibold my-5 text-white">{info.mediumText}</h4>
+      <h5 className="text-sm font-medium mb-5 text-white">
         Please feel free to contact or ask any query.
       </h5>
       <Link

@@ -34,7 +34,7 @@ const tiers = [
     id: "tier-enterprise",
     href: "/fee-structure",
     priceMonthly: "$50",
-    description: "Hifz Course With Tajweed:",
+    description: "Tahfeez ul Quran Course With Tajweed:",
     features: [
       "Quran Memorization Course",
       "Daily Guided Lessons",
@@ -97,7 +97,7 @@ const Pricing = () => {
                 className="mt-8 space-y-3 text-sm leading-6 text-dullwhite"
               >
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
+                  <li key={feature} className="flex text-left gap-x-3">
                     <Tick className="h-6 w-6 flex-none stroke-[1.75] stroke-indigo-600" />
                     {feature}
                   </li>
