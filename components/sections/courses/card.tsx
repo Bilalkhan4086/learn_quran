@@ -6,7 +6,7 @@ const Card = ({ image, heading, description }: any) => {
   return (
     <Link
       href={"/courses/tafseer"}
-      className="max-w-[340px] min-w-[320px] rounded-xl bg-gray-900"
+      className="max-w-[340px] rounded-xl bg-gray-900"
     >
       <Image src={image} alt={"card"} height={500} width={500} />
       <div className="p-2">

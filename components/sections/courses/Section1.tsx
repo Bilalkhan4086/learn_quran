@@ -11,7 +11,8 @@ const Section1 = () => {
       {/* <h3 className="my-4 text-[22px] text-center max-md:text-[18px] text-kaizenblue">
         Our Courses 
       </h3> */}
-      <div className="flex gap-5 my-6 overflow-scroll">
+      <div className="gap-5 m-6 max-sm:m-20 grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1
+      ">
         {male_courses.map((course, i) => {
           return (
             <Card
