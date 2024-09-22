@@ -1,6 +1,5 @@
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 import Logo from "../Logo";
-import Image from "next/image";
 
 const navigation = {
   company: [
@@ -20,11 +19,6 @@ const navigation = {
       name: "Instagram",
       href: "#",
       icon: FaInstagram,
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: FaTwitter,
     },
     {
       name: "YouTube",
