@@ -1,8 +1,8 @@
 "use client";
 import Logo from "../Logo";
 import { Montserrat } from "next/font/google";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { WHATSAPP } from "@/constants/common";
 
 const montFont = Montserrat({
   subsets: ["latin"],
@@ -10,10 +10,6 @@ const montFont = Montserrat({
 });
 
 export default function Navbar() {
-  const router = useRouter();
-  const handleClickLink = (_link: string) => {
-    router.push(_link);
-  };
   return (
     <nav className="bg-transparent shadow">
       <>
@@ -30,20 +26,17 @@ export default function Navbar() {
             <div className=" md:ml-6 flex items-center md:items-center">
               <Link
                 href={"/fee-structure"}
-                className="ml-6 max-[600px]:ml-2 py-1 cursor-pointer max-[600px]:text-sm text-white w-24 uppercase hover:text-gray-300 "
+                className="ml-6 max-[600px]:ml-2 py-1 cursor-pointer text-lg text-white w-24 uppercase hover:text-gray-300 "
               >
                 Pricing
               </Link>
 
-              <button
-                onClick={() => {
-                  handleClickLink("");
-                }}
-                type="button"
+              <Link
+                href={`https://wa.me/${WHATSAPP}?text=Hi%2C%0AI%20want%20to%20schedule%20a%20demo.%0ACan%20you%20tell%20me%20the%20process%20for%20it%3F`}
                 className="rounded-full cursor-pointer max-[600px]:ml-2  max-[600px]:text-sm ml-6 ring-1 uppercase  bg-purple px-4 ring-purple py-1 text-white hover:ring-purple hover:text-gray-300 "
               >
                 Schedule <span className="max-[600px]:hidden">Class</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

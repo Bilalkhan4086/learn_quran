@@ -4,7 +4,7 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <Link href={"/"} className="flex items-center">
+    <Link href={"/"} className="flex items-center max-sm:flex-col">
       <div className="flex items-center">
         <h2 className="text-purple text-xl font-medium uppercase">Kanzul</h2>
         <div className="h-4 border-l-2 mx-2 font-bold border-white">{""}</div>

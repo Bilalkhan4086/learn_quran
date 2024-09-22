@@ -16,7 +16,7 @@ const Section1 = () => {
           return (
             <Card
               key={i}
-              image={"/images/Qurann.webp"}
+              image={course.image}
               heading={course.heading}
               description={course.description}
               url={course.url}
