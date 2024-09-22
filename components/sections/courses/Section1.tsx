@@ -10,7 +10,7 @@ const Section1 = () => {
       </h2>
       <div
         className="gap-5 my-6 grid grid-cols-3 max-md:grid-cols-2 
-      max-sm:grid-cols-1 mx-1 max-sm:mx-[15%]"
+      max-sm:grid-cols-1 mx-1"
       >
         {courses.map((course, i) => {
           return (
