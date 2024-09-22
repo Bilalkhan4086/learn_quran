@@ -16,7 +16,7 @@ const CourseDetails = ({ courseName }: CourseDetailsProps) => {
         <div className="mt-4">
           <Link
             href={`https://wa.me/${WHATSAPP}?text=Hi%2C%0AI%20want%20to%20schedule%20a%20demo.%0ACan%20you%20tell%20me%20the%20process%20for%20it%3F`}
-            className="bg-kaizenred uppercase hover:bg-kaizenyellow mt-4 text-black py-2 px-20 m-auto"
+            className="bg-kaizenred uppercase hover:bg-kaizenyellow mt-4 text-black py-2 px-8 m-auto"
           >
             Free Demo Classes
           </Link>
