@@ -1,12 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-const CourseDetails = () => {
+interface CourseDetailsProps {
+  courseName: string;
+}
+
+const CourseDetails = ({ courseName }: CourseDetailsProps) => {
   return (
     <div className="my-5 max-lg:p-6 p-20 flex flex-col text-black bg-kaizenblue w-full">
       <div className="mx-auto mb-6">
         <h3 className="uppercase text-xl text-center font-semibold">
-          Tafseer Course
+          {courseName}
         </h3>
         <div className="mt-4">
           <Link
@@ -19,30 +23,13 @@ const CourseDetails = () => {
       </div>
       <div className="flex justify-around">
         <div>
-          <h4 className="text-lg">Course Details For Brothers</h4>
+          <h4 className="text-lg">Course Details</h4>
           <ul>
-            <li>
-              <span className="font-semibold">Period:</span> 10 Months
-            </li>
             <li>
               <span className="font-semibold">Duration:</span> 30 Minutes
             </li>
             <li>
-              <span className="font-semibold">Languages:</span> urdu
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg">Course Details For Sisters</h4>
-          <ul>
-            <li>
-              <span className="font-semibold">Period:</span> 10 Months
-            </li>
-            <li>
-              <span className="font-semibold">Duration:</span> 30 Minutes
-            </li>
-            <li>
-              <span className="font-semibold">Languages:</span> urdu
+              <span className="font-semibold">Languages:</span> English, Urdu
             </li>
           </ul>
         </div>

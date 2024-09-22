@@ -1,11 +1,8 @@
 "use client";
-import { useState } from "react";
-import { FaBars as Burger } from "react-icons/fa6";
-import { RxCross2 as Cross } from "react-icons/rx";
-import { navbar } from "@/constants/navbar";
 import Logo from "../Logo";
 import { Montserrat } from "next/font/google";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const montFont = Montserrat({
   subsets: ["latin"],
@@ -31,15 +28,12 @@ export default function Navbar() {
               <div className="hidden md:ml-6 md:flex md:space-x-8"></div>
             </div>
             <div className=" md:ml-6 flex items-center md:items-center">
-              <button
-                onClick={() => {
-                  handleClickLink("/fee-structure");
-                }}
-                type="button"
+              <Link
+                href={"/fee-structure"}
                 className="ml-6 max-[600px]:ml-2 py-1 cursor-pointer max-[600px]:text-sm text-white w-24 uppercase hover:text-gray-300 "
               >
                 Pricing
-              </button>
+              </Link>
 
               <button
                 onClick={() => {
@@ -50,7 +44,6 @@ export default function Navbar() {
               >
                 Schedule <span className="max-[600px]:hidden">Class</span>
               </button>
-              {/* Profile dropdown */}
             </div>
           </div>
         </div>
