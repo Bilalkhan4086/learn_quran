@@ -28,21 +28,23 @@ const Section1 = () => {
           <Image src={Quran} alt="quran" />
         </div>
       </div>
-      <div className="px-4 mt-10">
-        <h2 className="text-3xl text-kaizenblue underline">Our Course Values</h2>
+      <div className="px-4 max-w-[900px] xl:mx-0 mx-auto mt-10">
+        <h2 className="text-3xl text-kaizenblue underline">
+          Our Course Values
+        </h2>
         {coreValues.map((value, i) => (
           <div className="max-w-4xl my-2" key={i}>
             <h3 className="font-semibold text-kaizenblue">{value.heading}</h3>
-            <p className="text-kaizenyellow">{value.description}</p>
+            <p className="text-teal-50">{value.description}</p>
           </div>
         ))}
-        <p className="my-10 mx-auto max-w-5xl text-center text-kaizenred">
-          At <span className="text-purple">Kanzul Quran</span>, we aim to
-          inspire and guide each student, helping them not only learn the Quran
-          but also live by its teachings, fostering a lifelong love and respect
-          for their faith.
-        </p>
       </div>
+      <p className="my-10 mx-auto max-w-5xl text-center text-kaizenred">
+        At <span className="text-purple">Kanzul Quran</span>, we aim to inspire
+        and guide each student, helping them not only learn the Quran but also
+        live by its teachings, fostering a lifelong love and respect for their
+        faith.
+      </p>
     </>
   );
 };

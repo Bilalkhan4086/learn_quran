@@ -24,8 +24,8 @@ const Section1 = () => {
       />
       <div className="max-w-[1024px] flex flex-col gap-3 text-xl mx-auto my-10">
         <p>
-          <span className="text-purple">Kanzul Quran Online Academy</span> is
-          a platform dedicated to providing{" "}
+          <span className="text-purple">Kanzul Quran Online Academy</span> is a
+          platform dedicated to providing{" "}
           <span className="text-kaizenyellow">
             Islamic and Quranic education
           </span>{" "}
@@ -58,10 +58,8 @@ const Section1 = () => {
         </p>
         <p>
           At{" "}
-          <span className="text-kaizengreen">
-           Kanzul Quran Online Academy
-          </span>
-          , we&apos;re committed to offering{" "}
+          <span className="text-kaizengreen">Kanzul Quran Online Academy</span>,
+          we&apos;re committed to offering{" "}
           <span className="text-kaizengreen">specially designed courses</span>{" "}
           that cater to the needs of our diverse student community.
           <span className="text-kaizengreen">Join us</span>, and experience the
