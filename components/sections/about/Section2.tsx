@@ -37,7 +37,7 @@ const contactInfo = [
 const Section2 = () => {
   return (
     <div className="my-10">
-      <h3 className="text-3xl text-kaizenred text-center">Our Contact</h3>
+      <h3 className="text-3xl text-purple text-center underline" id="contact">Our Contact</h3>
       <div className="overflow-scroll px-2">
         <div className="flex gap-4 my-10 min-w-[1280px]">
           {contactInfo.map((info, i) => (

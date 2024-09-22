@@ -6,8 +6,8 @@ interface CardProps {
 
 const Card = ({ listOfQuestions }: CardProps) => {
   return (
-    <div className="my-5 max-lg:p-6 p-20 ring-1 ring-gray-100">
-      <h3 className="text-[24px]">What Will I Learn?</h3>
+    <div className="my-5 max-lg:p-6 p-20 ring-1 ring-gray-100 ">
+      <h3 className="text-[24px] text-white">What Will I Learn?</h3>
 
       <ul className="flex justify-between  max-[1100px]:justify-center flex-wrap">
         {listOfQuestions?.map((question, i) => {

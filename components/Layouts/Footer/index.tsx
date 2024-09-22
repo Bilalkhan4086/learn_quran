@@ -5,8 +5,8 @@ import Image from "next/image";
 const navigation = {
   company: [
     { name: "courses", href: "/courses" },
-    { name: "contact", href: "#" },
-    { name: "About us", href: "#" },
+    { name: "contact", href: "/about#contact" },
+    { name: "About us", href: "/about" },
     { name: "Fee structure", href: "/fee-structure" },
   ],
 
@@ -89,7 +89,7 @@ export default function Example() {
       <div className="mt-8 border-t  bg-[#222332] border-white/10 py-8 ">
         <div className="flex max-[570px]:flex-col mx-auto max-w-7xl">
           <p className="text-xs  max-[570px]:mx-auto max-sm:px-4 max-md:text-[10px] px-8 flex-1 uppercase leading-5 tracking-widest text-gray-300">
-            2023 Taleem ALQURAN LLC, All rights reserved.
+            2023 Kanzul QURAN LLC, All rights reserved.
           </p>
         </div>
       </div>

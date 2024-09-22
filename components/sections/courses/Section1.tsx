@@ -9,8 +9,8 @@ const Section1 = () => {
         Our Courses
       </h2>
       <div
-        className="gap-5 m-6 max-sm:m-20 grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1
-      "
+        className="gap-5 my-6 grid grid-cols-3 max-md:grid-cols-2 
+      max-sm:grid-cols-1 mx-1 max-sm:mx-[15%]"
       >
         {courses.map((course, i) => {
           return (

@@ -5,7 +5,7 @@ const Section1 = () => {
   return (
     <div className="text-white max-[350px]:pt-10  pt-12 mt-2">
       <h1 className="text-6xl text-center max-md:text-5xl max-[500px]:text-4xl my-3 text-purple font-medium">
-        <span className="uppercase">Taelam AlQuran</span>{" "}
+        <span className="uppercase">Kanzul Quran</span>{" "}
         <span className="text-kaizenyellow">Online Academy</span>
       </h1>
       <h3 className="text-white text-center my-5 text-3xl  max-[500px]:text-xl max-md:text-2xl">
@@ -24,7 +24,7 @@ const Section1 = () => {
       />
       <div className="max-w-[1024px] flex flex-col gap-3 text-xl mx-auto my-10">
         <p>
-          <span className="text-purple">Tealam Al-Quran Online Academy</span> is
+          <span className="text-purple">Kanzul Quran Online Academy</span> is
           a platform dedicated to providing{" "}
           <span className="text-kaizenyellow">
             Islamic and Quranic education
@@ -59,7 +59,7 @@ const Section1 = () => {
         <p>
           At{" "}
           <span className="text-kaizengreen">
-            Tealam Al-Quran Online Academy
+           Kanzul Quran Online Academy
           </span>
           , we&apos;re committed to offering{" "}
           <span className="text-kaizengreen">specially designed courses</span>{" "}
