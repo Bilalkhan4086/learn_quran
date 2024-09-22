@@ -12,17 +12,17 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/share/f21jN9Y23hFjsXuX/?mibextid=qi2Omg",
       icon: FaFacebook,
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/kanzulquranonlineacadmey/",
       icon: FaInstagram,
     },
     {
       name: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/@KanzulQuranOnlineAcademy",
       icon: FaYoutube,
     },
   ],
