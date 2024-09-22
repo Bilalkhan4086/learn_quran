@@ -6,11 +6,11 @@ const Card = ({ image, heading, description }: any) => {
   return (
     <Link
       href={"/courses/tafseer"}
-      className="max-w-[340px] min-w-[320px] rounded-xl bg-gray-900"
+      className="max-w-[360px] rounded-xl bg-gray-800"
     >
-      <Image src={image} alt={"card"} height={500} width={500} />
+      <Image src={image} alt={"card"} height={500} width={600}/>
       <div className="p-2">
-        <h5 className="text-center">{heading}</h5>
+        <h5 className="text-center text-kaizenred">{heading}</h5>
         <p className="text-[12px] text-gray-400">
           {description?.slice(0, 117)}
           {description?.length > 117 && "..."}

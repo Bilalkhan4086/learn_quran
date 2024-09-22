@@ -20,9 +20,7 @@ const Section3 = () => {
                 >
                   {obj.question}
                 </h5>
-                <p className="ml-4 mb-3 text-orange-50">
-                  <div dangerouslySetInnerHTML={{ __html: obj.answer }} />
-                </p>
+                  <p className="ml-4 mb-3 text-orange-50" dangerouslySetInnerHTML={{ __html: obj.answer }} />
               </>
             ))}
           </div>

@@ -5,13 +5,15 @@ import { female_courses, male_courses } from "@/constants/courses";
 const Section1 = () => {
   return (
     <div>
-      <h2 className="text-black mb-10 bg-kaizenyellow text-[42px] font-semibold text-center max-md:text-[30px]">
-        Courses We Offer
+      <h2 className="text-black mb-10 bg-kaizenyellow text-[42px] font-semibold 
+      text-center max-md:text-[30px]">
+        Our Courses 
       </h2>
-      <h3 className="my-4 text-[22px] text-center max-md:text-[18px] text-kaizenblue">
-        Courses For Brothers
-      </h3>
-      <div className="flex gap-5 my-6 overflow-scroll">
+      {/* <h3 className="my-4 text-[22px] text-center max-md:text-[18px] text-kaizenblue">
+        Our Courses 
+      </h3> */}
+      <div className="gap-5 my-6 grid grid-cols-3 max-md:grid-cols-2 
+      max-sm:grid-cols-1 mx-1 max-sm:mx-[15%]">
         {male_courses.map((course, i) => {
           return (
             <Card
@@ -23,21 +25,7 @@ const Section1 = () => {
           );
         })}
       </div>
-      <h3 className="my-4 text-[22px] text-center max-md:text-[18px] text-kaizenred">
-        Courses For Sisters
-      </h3>
-      <div className="flex gap-5 my-6 overflow-scroll">
-        {female_courses.map((course, i) => {
-          return (
-            <Card
-              key={i}
-              image={"/images/female.jpeg"}
-              heading={course.heading}
-              description={course.description}
-            />
-          );
-        })}
-      </div>
+
     </div>
   );
 };

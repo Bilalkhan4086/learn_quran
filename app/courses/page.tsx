@@ -3,7 +3,7 @@ import React from "react";
 
 const Courses = () => {
   return (
-    <div className="max-w-7xl relative px-4 m-auto">
+    <div className="max-w-7xl relative px-4 pl-4 m-auto">
       <Section1 />
     </div>
   );
