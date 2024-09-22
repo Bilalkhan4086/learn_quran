@@ -96,7 +96,7 @@ const FeeStructure = () => {
             </tr>
             <tr>
               <th className="border-r-[1px] py-2 border-red-50 text-kaizenred" scope="row">
-                4 days a week 16 per month
+                6 days a week 24 per month
               </th>
               <td className="border-r-[1px] py-2 border-red-50 text-kaizenred">
                 30 min lessons
