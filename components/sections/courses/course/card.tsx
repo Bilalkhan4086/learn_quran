@@ -13,17 +13,11 @@ const Card = ({ listOfQuestions }: CardProps) => {
         {listOfQuestions?.map((question, i) => {
           return (
             <>
-<<<<<<< Updated upstream
-              <li className="max-w-[440px] ml-4 list-disc my-2" key={i}>
-                Which titles are used by Allah Almighty to address the
-                believers?
-=======
               <li
                 className="max-w-[440px] ml-4 list-disc my-2 text-white"
                 key={i}
               >
                 {question}
->>>>>>> Stashed changes
               </li>
             </>
           );
