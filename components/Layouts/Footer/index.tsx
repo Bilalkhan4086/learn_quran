@@ -12,7 +12,7 @@ const navigation = {
   social: [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/share/f21jN9Y23hFjsXuX/?mibextid=qi2Omg",
+      href: "https://www.facebook.com/profile.php?id=61566015578270",
       icon: FaFacebook,
     },
     {

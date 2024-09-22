@@ -1,1 +1,1 @@
-export const WHATSAPP = 923045665065;
+export const WHATSAPP = 923025827641;
