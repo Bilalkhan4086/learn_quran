@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({ image, heading, description }: any) => {
+const Card = ({ url, image, heading, description }: any) => {
   return (
     <Link
+<<<<<<< Updated upstream
       href={"/courses/tafseer"}
       className="max-w-[340px] min-w-[320px] rounded-xl bg-gray-900"
+=======
+      href={`/courses/${url}`}
+      className="max-w-[340px] rounded-xl bg-gray-900"
+>>>>>>> Stashed changes
     >
       <Image src={image} alt={"card"} height={500} width={500} />
       <div className="p-2">
