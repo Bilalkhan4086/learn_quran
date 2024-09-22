@@ -37,7 +37,7 @@ const Section1 = () => {
           </div>
         ))}
         <p className="my-10 mx-auto max-w-5xl text-center text-kaizenred">
-          At <span className="text-purple">Taleem Al Quran</span>, we aim to
+          At <span className="text-purple">Kanzul Quran</span>, we aim to
           inspire and guide each student, helping them not only learn the Quran
           but also live by its teachings, fostering a lifelong love and respect
           for their faith.
