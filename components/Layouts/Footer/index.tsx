@@ -39,7 +39,7 @@ export default function Example() {
       </h2>
       <div className="mx-auto max-w-7xl px-6 pt-16 sm:pt-24 lg:px-8 lg:pt-10">
         <div className="flex justify-between">
-          <div className="space-y-8 ">
+          <div className="space-y-8 mr-8">
             <Logo />
             <p className="uppercase text-lg max-[570px]:text-[16px] leading-6 text-gray-300">
               Where you learn to recite Quran.
@@ -61,9 +61,9 @@ export default function Example() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm uppercase font-semibold leading-6 text-white">
-                  Company
+                  More Links
                 </h3>
-                <ul role="list" className="mt-6">
+                <ul role="list" className="mt-6 ml-2 min-w-[111px]">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
