@@ -24,11 +24,47 @@ const contactInfo = [
 ];
 
 const Section2 = () => {
+  // Structured data for SEO and AI search engines
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Kanzul Quran Online Academy",
+    "alternateName": "Kanzul Quran",
+    "description": "Online Islamic school providing Quran and Islamic teaching services globally. Learn Quran online with expert tutors through one-to-one interactive classes for kids, adults, males, and females.",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://kanzulquran.com",
+    "telephone": "+923239154146",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+923239154146",
+      "contactType": "Customer Service",
+      "availableLanguage": ["English", "Urdu", "Arabic"],
+      "areaServed": "Worldwide"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61566015578270",
+      "https://www.instagram.com/kanzulquranonlineacadmey/",
+      "https://www.youtube.com/@KanzulQuranOnlineAcademy"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "description": "Online Quran learning courses including Tajweed, Nazra, Hifz, Qiraat, and Fard Knowledge courses",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <div className="my-10">
-      <h3 className="text-3xl text-purple text-center underline" id="contact">
-        Our Contact
-      </h3>
+      <h1 className="text-3xl text-purple text-center underline" id="contact">
+        Contact Kanzul Quran Online Academy - Learn Quran Online
+      </h1>
+      <p className="text-center text-white mt-4 mb-6 max-w-3xl mx-auto px-4">
+        Get in touch with Kanzul Quran Online Academy to start your journey of learning Quran online. 
+        Whether you're looking for online Quran classes for kids, online Quran classes for adults, 
+        or seeking a qualified Quran teacher online, our team is here to help. Contact us via phone, 
+        WhatsApp, or message to schedule your free trial class and begin learning the Quran with proper 
+        Tajweed and pronunciation from experienced online Quran tutors.
+      </p>
       <div className="max-w-[1000px] mx-auto">
         <div className="px-2 gap-5 my-10 grid xl:grid-cols-3 max-xl:grid-cols-3 max-md:grid-cols-2 max-[560px]:grid-cols-1">
           {contactInfo.map((info, i) => (
@@ -36,6 +72,10 @@ const Section2 = () => {
           ))}
         </div>
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
     </div>
   );
 };
