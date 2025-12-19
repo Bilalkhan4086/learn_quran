@@ -60,7 +60,7 @@ const Section2 = () => {
       </h1>
       <p className="text-center text-white mt-4 mb-6 max-w-3xl mx-auto px-4">
         Get in touch with Kanzul Quran Online Academy to start your journey of learning Quran online. 
-        Whether you're looking for online Quran classes for kids, online Quran classes for adults, 
+        Whether you&apos;re looking for online Quran classes for kids, online Quran classes for adults, 
         or seeking a qualified Quran teacher online, our team is here to help. Contact us via phone, 
         WhatsApp, or message to schedule your free trial class and begin learning the Quran with proper 
         Tajweed and pronunciation from experienced online Quran tutors.
