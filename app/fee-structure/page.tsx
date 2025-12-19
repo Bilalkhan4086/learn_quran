@@ -94,21 +94,7 @@ const FeeStructure = () => {
               </td>
               <td className="text-kaizengreen">€38 per month</td>
             </tr>
-            <tr>
-              <th className="border-r-[1px] py-2 border-red-50 text-kaizenred" scope="row">
-                6 days a week 24 per month
-              </th>
-              <td className="border-r-[1px] py-2 border-red-50 text-kaizenred">
-                30 min lessons
-              </td>
-              <td className="border-r-[1px] py-2 border-red-50 text-kaizengreen">
-                $70 per month
-              </td>
-              <td className="border-r-[1px] py-2 border-red-50 text-kaizengreen">
-                €45 per month
-              </td>
-              <td className="text-kaizengreen">€45 per month</td>
-            </tr>
+           
           </tbody>
         </table>
       </div>
