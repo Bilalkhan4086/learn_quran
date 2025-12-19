@@ -10,9 +10,9 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Kanzul Quran Online Academy - Learn Quran Online | Online Quran Classes",
+  title: "Kanzul Quran Online Academy - Learn Quran Online",
   description:
-    "Learn Quran online with expert tutors at Kanzul Quran Online Academy. Online Quran classes for kids and adults, Tajweed courses, Hifz, Nazra, and Islamic education. One-to-one interactive Quran learning with qualified male and female teachers. Free trial class available.",
+    "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
   keywords: [
     "online quran learning",
     "learn quran online",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://kanzulquran.com",
-    title: "Kanzul Quran Online Academy - Learn Quran Online | Online Quran Classes",
+    title: "Kanzul Quran Online Academy - Learn Quran Online",
     description:
-      "Learn Quran online with expert tutors at Kanzul Quran Online Academy. Online Quran classes for kids and adults, Tajweed courses, Hifz, Nazra, and Islamic education. Free trial class available.",
+      "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
     siteName: "Kanzul Quran Online Academy",
     images: [
       {
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kanzul Quran Online Academy - Learn Quran Online",
     description:
-      "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed courses, Hifz, Nazra, and Islamic education. Free trial class available.",
+      "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
     images: ["/images/quran.png"],
     creator: "@KanzulQuranOnlineAcademy",
   },
