@@ -6,7 +6,7 @@ const tiers = [
     name: "Beginner",
     id: "tier-freelancer",
     href: "/fee-structure",
-    priceMonthly: "$30",
+    priceMonthly: "$20",
     description: "Basic Qaida Reading and Learning with Tajweed:",
     features: [
       "Basic Qaida Mastery",
@@ -20,7 +20,7 @@ const tiers = [
     name: "Intermediate",
     id: "tier-startup",
     href: "/fee-structure",
-    priceMonthly: "$40",
+    priceMonthly: "$30",
     description: "Basic Quran Recitation and Learning with Tajweed:",
     features: [
       "Quranic Reading with Tajweed",
@@ -33,7 +33,7 @@ const tiers = [
     name: "Advanced",
     id: "tier-enterprise",
     href: "/fee-structure",
-    priceMonthly: "$50",
+    priceMonthly: "$40",
     description: "Tahfeez ul Quran Course With Tajweed:",
     features: [
       "Quran Memorization Course",

@@ -27,7 +27,7 @@ const CourseDetails = ({ courseName }: CourseDetailsProps) => {
           <h4 className="text-lg">Course Details</h4>
           <ul>
             <li>
-              <span className="font-semibold">Duration:</span> 30 Minutes
+              <span className="font-semibold">Duration:</span> 20 Minutes
             </li>
             <li>
               <span className="font-semibold">Languages:</span> English, Urdu
