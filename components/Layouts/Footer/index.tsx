@@ -1,92 +1,109 @@
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+import Link from "next/link";
+import { LuArrowUpRight, LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 import Logo from "../Logo";
+import { navbar } from "@/constants/navbar";
+import { siteConfig } from "@/constants/common";
 
-const navigation = {
-  company: [
-    { name: "courses", href: "/courses" },
-    { name: "contact", href: "/about#contact" },
-    { name: "About us", href: "/about" },
-    { name: "Fee structure", href: "/fee-structure" },
-  ],
+const socialLinks = [
+  { label: "Facebook", href: siteConfig.social.facebook },
+  { label: "Instagram", href: siteConfig.social.instagram },
+  { label: "YouTube", href: siteConfig.social.youtube },
+];
 
-  social: [
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=61566015578270",
-      icon: FaFacebook,
-    },
-    {
-      name: "Instagram",
-      href: "https://www.instagram.com/kanzulquranonlineacadmey/",
-      icon: FaInstagram,
-    },
-    {
-      name: "YouTube",
-      href: "https://www.youtube.com/@KanzulQuranOnlineAcademy",
-      icon: FaYoutube,
-    },
-  ],
-};
-
-export default function Example() {
+export default function Footer() {
   return (
-    <div
-      className=" border-t-[1px] border-t-white"
-      aria-labelledby="footer-heading"
-    >
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-      <div className="mx-auto max-w-7xl px-6 pt-16 sm:pt-24 lg:px-8 lg:pt-10">
-        <div className="flex justify-between">
-          <div className="space-y-8 mr-8">
-            <Logo />
-            <p className="uppercase text-lg max-[570px]:text-[16px] leading-6 text-gray-300">
-              Where you learn to recite Quran.
+    <footer className="relative overflow-hidden border-t border-border bg-surface text-white">
+      <div className="islamic-pattern absolute inset-0 opacity-40" aria-hidden="true" />
+      <div className="site-container relative py-14 sm:py-16">
+        <div className="grid gap-12 border-b border-white/15 pb-12 md:grid-cols-[1.3fr_0.7fr_0.8fr]">
+          <div className="max-w-md">
+            <Logo inverse />
+            <p className="mt-5 text-sm leading-7 text-white/70 sm:text-base">
+              Personal online Quran learning for children and adults, guided by
+              qualified tutors from the comfort of home.
             </p>
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-500 hover:text-gray-400"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-10 w-10 max-[570px]:h-8 max-[570px]:w-8" />
-                </a>
+            <a
+              href={siteConfig.whatsappTrialHref}
+              className="mt-6 inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-canvas transition-colors hover:bg-primary-light"
+            >
+              Schedule a free trial
+              <LuArrowUpRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              Explore
+            </h2>
+            <ul className="mt-5 space-y-3">
+              {navbar.map((item) => (
+                <li key={item.link}>
+                  <Link
+                    href={item.link}
+                    className="inline-flex min-h-11 cursor-pointer items-center text-sm text-white/70 transition-colors hover:text-white"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
               ))}
-            </div>
+              <li>
+                <Link
+                  href="/about#contact"
+                  className="inline-flex min-h-11 cursor-pointer items-center text-sm text-white/70 transition-colors hover:text-white"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div className="">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm uppercase font-semibold leading-6 text-white">
-                  More Links
-                </h3>
-                <ul role="list" className="mt-6 ml-2 min-w-[111px]">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-sm uppercase leading-normal text-gray-300 hover:text-white"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+
+          <div>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              Get in touch
+            </h2>
+            <ul className="mt-5 space-y-4 text-sm text-white/70">
+              <li>
+                <a
+                  href={siteConfig.phoneHref}
+                  className="flex min-h-11 cursor-pointer items-center gap-3 hover:text-white"
+                >
+                  <LuPhone aria-hidden="true" className="h-4 w-4 text-primary" />
+                  {siteConfig.phoneDisplay}
+                </a>
+              </li>
+              <li className="flex min-h-11 items-center gap-3">
+                <LuMapPin aria-hidden="true" className="h-4 w-4 text-primary" />
+                Serving students worldwide
+              </li>
+              <li>
+                <a
+                  href={siteConfig.smsHref}
+                  className="flex min-h-11 cursor-pointer items-center gap-3 hover:text-white"
+                >
+                  <LuMail aria-hidden="true" className="h-4 w-4 text-primary" />
+                  Send an SMS
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 pt-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Kanzul Quran Online Academy. All rights reserved.</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {socialLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="inline-flex min-h-11 cursor-pointer items-center gap-1 transition-colors hover:text-white"
+              >
+                {item.label}
+                <LuArrowUpRight aria-hidden="true" className="h-3 w-3" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t  bg-[#222332] border-white/10 py-8 ">
-        <div className="flex max-[570px]:flex-col mx-auto max-w-7xl">
-          <p className="text-xs  max-[570px]:mx-auto max-sm:px-4 max-md:text-[10px] px-8 flex-1 uppercase leading-5 tracking-widest text-gray-300">
-            2023 Kanzul QURAN LLC, All rights reserved.
-          </p>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 }

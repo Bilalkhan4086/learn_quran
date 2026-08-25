@@ -1,38 +1,30 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
 import Navbar from "@/components/Layouts/Navbar";
 import Footer from "@/components/Layouts/Footer";
-import { Metadata } from "next";
-
-const inter = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+import JsonLd from "@/components/ui/JsonLd";
+import { siteConfig } from "@/constants/common";
 
 export const metadata: Metadata = {
-  title: "Kanzul Quran Online Academy - Learn Quran Online",
-  description:
-    "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Learn Quran Online | Kanzul Quran Academy",
+    template: "%s | Kanzul Quran Academy",
+  },
+  description: siteConfig.description,
   keywords: [
-    "online quran learning",
-    "learn quran online",
-    "online quran classes",
-    "quran teacher online",
-    "online quran academy",
-    "quran classes online",
-    "online quran classes for kids",
-    "female quran teacher online",
-    "tajweed classes online",
-    "hifz course online",
-    "nazra quran online",
-    "online quran tutor",
-    "quran learning online",
-    "islamic education online",
-    "quran recitation online"
+    "learn Quran online",
+    "online Quran classes",
+    "Quran tutor online",
+    "Tajweed classes",
+    "Hifz course online",
+    "online Quran classes for kids",
+    "female Quran teacher online",
   ],
-  authors: [{ name: "Kanzul Quran Online Academy" }],
-  creator: "Kanzul Quran Online Academy",
-  publisher: "Kanzul Quran Online Academy",
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,
@@ -44,49 +36,76 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: ["/quran.png"],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://kanzulquran.com",
-    title: "Kanzul Quran Online Academy - Learn Quran Online",
-    description:
-      "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
-    siteName: "Kanzul Quran Online Academy",
-    images: [
-      {
-        url: "/images/quran.png",
-        width: 1200,
-        height: 630,
-        alt: "Kanzul Quran Online Academy - Learn Quran Online",
-      },
-    ],
+    url: "/",
+    siteName: siteConfig.name,
+    title: "Learn Quran Online | Kanzul Quran Academy",
+    description: siteConfig.description,
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kanzul Quran Online Academy - Learn Quran Online",
-    description:
-      "Learn Quran online with expert tutors. Online Quran classes for kids and adults, Tajweed, Hifz, Nazra courses. Free trial class available.",
-    images: ["/images/quran.png"],
-    creator: "@KanzulQuranOnlineAcademy",
+    title: "Learn Quran Online | Kanzul Quran Academy",
+    description: siteConfig.description,
+    images: ["/opengraph-image"],
   },
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://kanzulquran.com",
+  icons: {
+    icon: { url: "/images/logo.png", type: "image/png" },
+    apple: "/images/logo.png",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: siteConfig.name,
+  alternateName: siteConfig.shortName,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  telephone: siteConfig.phoneDisplay,
+  areaServed: "Worldwide",
+  sameAs: Object.values(siteConfig.social),
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteConfig.phoneDisplay,
+    contactType: "customer service",
+    availableLanguage: ["English", "Urdu"],
+    areaServed: "Worldwide",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
+        <a
+          href="#main-content"
+          className="fixed left-4 top-3 z-[100] -translate-y-24 rounded-full bg-brand px-5 py-3 font-bold text-white transition-transform focus:translate-y-0"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        {children}
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
         <Footer />
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
       </body>
     </html>
   );
 }
+
+export type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;

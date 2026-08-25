@@ -1,31 +1,42 @@
-export const faqs: { question: string; answer: string }[] = [
+export const faqs = [
   {
-    question: "What is online Quran teaching?",
+    question: "What happens in the free trial class?",
     answer:
-      "Online Quran teaching provides Quranic education via the internet, using virtual classes and digital resources.",
+      "The trial gives the student and tutor time to meet, discuss learning goals, assess the current level, and recommend a suitable course plan.",
   },
   {
-    question: "Is online Quran teaching helpful?",
+    question: "Who can join the online Quran classes?",
     answer:
-      "Our experience finds 1 to 1 online Quran teaching effective, engaging and useful.Try your free trial session under no obligation to form your own opinion about its usefulness.",
+      "Classes are available for children and adults, including brothers and sisters. Course pages explain any audience-specific requirements.",
   },
   {
-    question: "Can I change the timing again again?",
-    answer: "No you can't change timming so select your timming at once",
-  },
-  {
-    question:
-      "What if I complete my Tajweed from another institute and  I want to do anyother courde? ",
-    answer: "We will take some basic test of Tajweed from you.",
-  },
-  {
-    question: "Do you only teach Quran?",
+    question: "Are lessons taught one to one?",
     answer:
-      "No, we also teach other islamic courses. <a href='/courses' class='text-purple underline'>see courses</a>",
+      "Yes. Lessons are delivered live in a one-to-one format so the tutor can adapt the pace and feedback to each student.",
   },
   {
-    question: "What if I am waiting online and my tutor is not there?",
+    question: "Can I change my regular class time?",
     answer:
-      "Please contact coordinator or call us on our phone number given in the website.",
+      "Class timings are agreed during enrollment. Please choose carefully because regular timing changes are not supported.",
   },
-];
+  {
+    question: "Do you offer courses beyond Quran reading?",
+    answer:
+      "Yes. The academy also offers Tajweed, Hifz, Qiraat, selected Surah memorization, and essential Islamic knowledge courses.",
+    link: { href: "/courses", label: "Explore all courses" },
+  },
+  {
+    question: "What should I do if my tutor is not online?",
+    answer:
+      "Please contact the academy coordinator by phone or WhatsApp so the team can assist you promptly.",
+  },
+] satisfies FaqItem[];
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+  link?: {
+    href: string;
+    label: string;
+  };
+};

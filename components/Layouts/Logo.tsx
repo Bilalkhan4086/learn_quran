@@ -1,17 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const Logo = () => {
+export default function Logo({ inverse = false }: LogoProps) {
   return (
-    <Link href={"/"} className="flex items-center max-sm:flex-col">
-      <div className="flex items-center">
-        <h2 className="text-purple text-xl font-medium uppercase">Kanzul</h2>
-        <div className="h-4 border-l-2 mx-2 font-bold border-white">{""}</div>
-      </div>
-      <h2 className="text-white text-xl uppercase font-lighter">quran</h2>
+    <Link
+      href="/"
+      className="group inline-flex min-h-11 items-center rounded-full"
+      aria-label="Kanzul Quran home"
+    >
+      <Image
+        src="/images/logo.png"
+        alt="Kanzul Quran Online Academy"
+        width={inverse ? 96 : 64}
+        height={inverse ? 96 : 64}
+        sizes={inverse ? "96px" : "64px"}
+        className={`object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.32)] transition-opacity duration-200 group-hover:opacity-90 ${
+          inverse ? "h-24 w-24" : "h-16 w-16"
+        }`}
+        priority={!inverse}
+      />
     </Link>
   );
-};
+}
 
-export default Logo;
+export type LogoProps = {
+  inverse?: boolean;
+};

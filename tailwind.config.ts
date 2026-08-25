@@ -7,28 +7,31 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
- 
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        purple: "#9370db",
-        blue: "#88c3fb",
-        darkblue: "#0b011d",
-        purplish: "#7d00fe",
-        greenish: "#46d912",
-        dullwhite: "#f5f5f5",
-        dullgreenish: "#56e462",
-        bluish: "#386bcb",
-        dullpurplish: "#5926BC",
-        kaizenred: "#F3BE98",
-        kaizenyellow: "#E5F382",
-        kaizengreen: "#6ddb9a",
-        kaizenblue: "#A2FEE5",
-        dullgraybg: "#0D1116",
+        canvas: "rgb(var(--color-canvas) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        "primary-light": "rgb(var(--color-primary-light) / <alpha-value>)",
+        brand: "rgb(var(--color-brand) / <alpha-value>)",
+        "brand-light": "rgb(var(--color-brand-light) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        "accent-soft": "rgb(var(--color-accent-soft) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
+        sage: "rgb(var(--color-sage) / <alpha-value>)",
+      },
+      fontFamily: {
+        sans: ["Avenir Next", "Avenir", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+        display: ["Iowan Old Style", "Baskerville", "Times New Roman", "serif"],
+      },
+      boxShadow: {
+        soft: "0 24px 70px -34px rgba(0, 0, 0, 0.86)",
+        card: "0 18px 55px -34px rgba(0, 0, 0, 0.82)",
+      },
+      borderRadius: {
+        "4xl": "1.5rem",
       },
     },
   },

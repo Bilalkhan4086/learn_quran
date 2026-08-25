@@ -3,26 +3,161 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: dark;
+  --color-canvas: 5 15 18;
+  --color-surface: 11 27 31;
+  --color-ink: 244 239 224;
+  --color-muted: 174 190 184;
+  --color-primary: 214 178 104;
+  --color-primary-light: 235 207 148;
+  --color-brand: 13 91 74;
+  --color-brand-light: 21 120 96;
+  --color-accent: 59 190 153;
+  --color-accent-soft: 15 61 54;
+  --color-border: 43 63 65;
+  --color-sage: 12 42 42;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: black;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: rgb(var(--color-ink));
+  background:
+    radial-gradient(circle at 15% -10%, rgba(59, 190, 153, 0.12), transparent 34rem),
+    rgb(var(--color-canvas));
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+::selection {
+  color: rgb(var(--color-canvas));
+  background: rgb(var(--color-primary));
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--color-accent));
+  outline-offset: 3px;
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .premium-card {
+    @apply rounded-2xl border border-border bg-surface shadow-card;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-accent sm:text-sm;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .islamic-pattern {
+    background-image:
+      linear-gradient(30deg, rgba(214, 178, 104, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(214, 178, 104, 0.06) 87.5%),
+      linear-gradient(150deg, rgba(214, 178, 104, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(214, 178, 104, 0.06) 87.5%),
+      linear-gradient(30deg, rgba(214, 178, 104, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(214, 178, 104, 0.06) 87.5%),
+      linear-gradient(150deg, rgba(214, 178, 104, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(214, 178, 104, 0.06) 87.5%);
+    background-position: 0 0, 0 0, 18px 32px, 18px 32px;
+    background-size: 36px 64px;
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-in {
+  opacity: 0;
+  animation: reveal-in 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.page-enter {
+  animation: page-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mobile-overlay {
+  animation: fade-in 180ms ease-out both;
+}
+
+.mobile-panel {
+  animation: panel-in 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.faq-panel {
+  animation: fade-in 200ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
